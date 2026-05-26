@@ -1,0 +1,24 @@
+{
+  "id": "pt_kv_cache_generate",
+  "title": "KV Cache Generate",
+  "difficulty": "hard",
+  "family": "ml_systems",
+  "task_type": "semantic_implementation",
+  "response_type": "workspace_files",
+  "summary": "Repair a tiny greedy decoder so it reuses cache state instead of recomputing the full prefix every generation step.",
+  "required_tools": ["python3"],
+  "time_budget_sec": 1800,
+  "starter_subdir": "starter",
+  "grader_entrypoint": "grader/grade.py",
+  "visible_checks": ["python3 visible_check.py"],
+  "expected_artifacts": ["kv_cache_generate.py"],
+  "fairness_notes": [
+    "The task uses a toy decoder implemented in pure Python.",
+    "The correctness target is exact token generation plus cache-aware embedding access."
+  ],
+  "anti_cheat_notes": [
+    "Hidden grading counts embedding visits.",
+    "Implementations that recompute the full prefix will fail the semantic efficiency check."
+  ],
+  "tags": ["generation", "kv-cache", "ml-systems"]
+}

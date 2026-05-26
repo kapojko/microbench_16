@@ -1,0 +1,24 @@
+{
+  "id": "sql_sessionize_gap_30m",
+  "title": "30-Minute Sessionization",
+  "difficulty": "medium",
+  "family": "sql",
+  "task_type": "query",
+  "response_type": "workspace_file",
+  "summary": "Write a SQLite query that assigns per-user session ids with a 30-minute inactivity gap and returns exact session start/end timestamps plus event counts.",
+  "required_tools": ["python3"],
+  "time_budget_sec": 1200,
+  "starter_subdir": "starter",
+  "grader_entrypoint": "grader/grade.py",
+  "visible_checks": ["python3 visible_check.py"],
+  "expected_artifacts": ["answer.sql"],
+  "fairness_notes": [
+    "The grader uses Python's built-in sqlite3 module.",
+    "Use SQLite-compatible timestamp arithmetic and window functions."
+  ],
+  "anti_cheat_notes": [
+    "Hidden tests include exact 30-minute boundary cases, duplicate timestamps, and cross-midnight sessions.",
+    "The output schema and row ordering must match exactly."
+  ],
+  "tags": ["sqlite", "sessionization", "window-functions", "timestamps"]
+}

@@ -1,0 +1,26 @@
+{
+  "benchmark": {
+    "id": "microbench-12",
+    "version": "0.2.0",
+    "description": "Phase-1 mixed benchmark for comparing coding-agent harnesses and local models across a 16-task mixed-language pack.",
+    "repeat_recommendation": 3
+  },
+  "tasks": [
+    {"id": "sql_recursive_org_chart"},
+    {"id": "py_shortest_path_with_path_reconstruction"},
+    {"id": "svc_boot_healthcheck"},
+    {"id": "sql_retention_rolling_7d"},
+    {"id": "py_rate_limiter_sliding_window"},
+    {"id": "rs_arena_graph_storage"},
+    {"id": "c_ring_buffer_overwrite_semantics"},
+    {"id": "pt_rope_gqa_layouts"},
+    {"id": "pt_kv_cache_generate"},
+    {"id": "pt_prompt_blend_prob_space"},
+    {"id": "jax_complex_lp_filtered_mrr"},
+    {"id": "repo_root_cause_trace_qna"},
+    {"id": "cpp_csv_groupby_quoted_fields"},
+    {"id": "py_strict_chat_prompt_normalizer"},
+    {"id": "pt_logit_lens_layers"},
+    {"id": "sql_sessionize_gap_30m"}
+  ]
+}

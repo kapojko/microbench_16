@@ -1,0 +1,29 @@
+{
+  "id": "svc_boot_healthcheck",
+  "title": "Service Boot Healthcheck",
+  "difficulty": "easy",
+  "family": "terminal",
+  "task_type": "repository_repair",
+  "response_type": "workspace_files",
+  "summary": "Repair a tiny multi-process Python service stack so boot, stop, and healthcheck work under default and overridden runtime settings.",
+  "required_tools": ["python3"],
+  "time_budget_sec": 1200,
+  "starter_subdir": "starter",
+  "grader_entrypoint": "grader/grade.py",
+  "visible_checks": ["python3 visible_check.py"],
+  "expected_artifacts": [
+    "scripts/boot_stack.py",
+    "scripts/stop_stack.py",
+    "tools/healthcheck.py"
+  ],
+  "fairness_notes": [
+    "The stack uses only the Python standard library.",
+    "The grader runs the stack with custom environment overrides.",
+    "No network access beyond localhost is required."
+  ],
+  "anti_cheat_notes": [
+    "Hidden grading uses a non-default port and state directory.",
+    "The worker process is intentionally made stale to verify heartbeat logic."
+  ],
+  "tags": ["python", "terminal", "ops", "healthcheck"]
+}

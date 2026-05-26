@@ -1,0 +1,24 @@
+{
+  "id": "py_strict_chat_prompt_normalizer",
+  "title": "Strict Chat Prompt Normalizer",
+  "difficulty": "medium",
+  "family": "backend",
+  "task_type": "code_patch",
+  "response_type": "workspace_files",
+  "summary": "Repair a message normalizer so strict chat backends receive one leading system message even when the source prompt contains fragmented system and developer instructions.",
+  "required_tools": ["python3"],
+  "time_budget_sec": 1200,
+  "starter_subdir": "starter",
+  "grader_entrypoint": "grader/grade.py",
+  "visible_checks": ["python3 visible_check.py"],
+  "expected_artifacts": ["prompt_normalizer.py"],
+  "fairness_notes": [
+    "The task is pure Python and has no external dependencies.",
+    "The grader checks exact normalized message payloads and input immutability."
+  ],
+  "anti_cheat_notes": [
+    "Hidden tests include late developer/system fragments after user turns.",
+    "Hidden tests check cache_hint preservation when instruction fragments are merged."
+  ],
+  "tags": ["chat", "prompt-normalization", "backend", "strict-backend"]
+}

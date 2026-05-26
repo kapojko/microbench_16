@@ -1,0 +1,24 @@
+{
+  "id": "pt_rope_gqa_layouts",
+  "title": "RoPE Layouts for GQA",
+  "difficulty": "hard",
+  "family": "ml_math",
+  "task_type": "numeric_implementation",
+  "response_type": "workspace_files",
+  "summary": "Repair a RoPE implementation so it handles both half-split and interleaved layouts on query and key tensors with GQA-style head counts.",
+  "required_tools": ["python3"],
+  "time_budget_sec": 1800,
+  "starter_subdir": "starter",
+  "grader_entrypoint": "grader/grade.py",
+  "visible_checks": ["python3 visible_check.py"],
+  "expected_artifacts": ["rope_gqa.py"],
+  "fairness_notes": [
+    "This task uses pure Python lists to stay dependency-light.",
+    "The grader allows small floating-point tolerances."
+  ],
+  "anti_cheat_notes": [
+    "Hidden grading checks both half-split and interleaved layouts.",
+    "Hidden grading verifies that non-rotary tail dimensions remain unchanged."
+  ],
+  "tags": ["rope", "gqa", "ml", "numerics"]
+}

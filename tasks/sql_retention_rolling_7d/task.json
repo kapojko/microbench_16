@@ -1,0 +1,24 @@
+{
+  "id": "sql_retention_rolling_7d",
+  "title": "Rolling 7-Day Retention",
+  "difficulty": "medium",
+  "family": "sql",
+  "task_type": "query",
+  "response_type": "workspace_file",
+  "summary": "Write a SQLite query that computes eligible users, retained users, and retention rate for every calendar anchor date in a 7-day rolling window metric.",
+  "required_tools": ["python3"],
+  "time_budget_sec": 1200,
+  "starter_subdir": "starter",
+  "grader_entrypoint": "grader/grade.py",
+  "visible_checks": ["python3 visible_check.py"],
+  "expected_artifacts": ["answer.sql"],
+  "fairness_notes": [
+    "The query is graded with Python's built-in sqlite3 module.",
+    "Use SQLite-compatible date arithmetic."
+  ],
+  "anti_cheat_notes": [
+    "Hidden data contains duplicate events and calendar gaps.",
+    "The grader checks exact output rows and floating-point retention values."
+  ],
+  "tags": ["sqlite", "analytics", "date_spine"]
+}

@@ -1,0 +1,24 @@
+{
+  "id": "c_ring_buffer_overwrite_semantics",
+  "title": "Ring Buffer Overwrite Semantics",
+  "difficulty": "medium",
+  "family": "c",
+  "task_type": "library_repair",
+  "response_type": "workspace_files",
+  "summary": "Repair a fixed-capacity C ring buffer so overwriting, peeking, and popping obey the documented oldest/newest semantics.",
+  "required_tools": ["gcc"],
+  "time_budget_sec": 1500,
+  "starter_subdir": "starter",
+  "grader_entrypoint": "grader/grade.py",
+  "visible_checks": ["python3 visible_check.py"],
+  "expected_artifacts": ["ring_buffer.c"],
+  "fairness_notes": [
+    "The grader compiles with -std=c11 -Wall -Wextra -Werror.",
+    "No external libraries are required."
+  ],
+  "anti_cheat_notes": [
+    "Hidden tests verify wrap-around after overwrite and pop.",
+    "Hidden tests check oldest/newest semantics directly."
+  ],
+  "tags": ["c", "systems", "data-structures"]
+}

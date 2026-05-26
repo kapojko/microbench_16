@@ -1,0 +1,25 @@
+{
+  "id": "sql_recursive_org_chart",
+  "title": "Recursive Org Chart",
+  "difficulty": "easy",
+  "family": "sql",
+  "task_type": "query",
+  "response_type": "workspace_file",
+  "summary": "Write a recursive SQLite query that returns active descendants for a root employee while avoiding cycles.",
+  "required_tools": ["python3"],
+  "time_budget_sec": 600,
+  "starter_subdir": "starter",
+  "grader_entrypoint": "grader/grade.py",
+  "visible_checks": ["python3 visible_check.py"],
+  "expected_artifacts": ["answer.sql"],
+  "fairness_notes": [
+    "The grader uses Python's built-in sqlite3 module.",
+    "No network or external database is required.",
+    "The query should be a single SELECT statement with a recursive CTE."
+  ],
+  "anti_cheat_notes": [
+    "Hidden data includes a cycle in the org graph.",
+    "The grader checks column names and output ordering."
+  ],
+  "tags": ["sqlite", "recursive_cte", "graphs"]
+}

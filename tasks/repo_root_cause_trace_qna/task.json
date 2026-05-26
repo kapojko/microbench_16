@@ -1,0 +1,24 @@
+{
+  "id": "repo_root_cause_trace_qna",
+  "title": "Repository Root Cause Trace QnA",
+  "difficulty": "hard",
+  "family": "repo_qa",
+  "task_type": "repository_qna",
+  "response_type": "answer_file",
+  "summary": "Trace a multi-file repository behavior bug and explain the root cause with concrete evidence and a fix outline.",
+  "required_tools": ["python3"],
+  "time_budget_sec": 1800,
+  "starter_subdir": "starter",
+  "grader_entrypoint": "grader/grade.py",
+  "visible_checks": [],
+  "expected_artifacts": ["answer.md"],
+  "fairness_notes": [
+    "This is a read-mostly task. No code changes are required.",
+    "The grader is deterministic and rubric-based."
+  ],
+  "anti_cheat_notes": [
+    "Rubric items require specific files, fields, and control-flow explanations.",
+    "A vague summary without concrete evidence will only receive partial credit."
+  ],
+  "tags": ["repo-qna", "root-cause", "rubric"]
+}

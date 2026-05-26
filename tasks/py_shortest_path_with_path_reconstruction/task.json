@@ -1,0 +1,24 @@
+{
+  "id": "py_shortest_path_with_path_reconstruction",
+  "title": "Shortest Path With Path Reconstruction",
+  "difficulty": "easy",
+  "family": "algorithms",
+  "task_type": "code_patch",
+  "response_type": "workspace_files",
+  "summary": "Repair a weighted shortest-path implementation so it handles ties, unreachable nodes, and path reconstruction correctly.",
+  "required_tools": ["python3"],
+  "time_budget_sec": 900,
+  "starter_subdir": "starter",
+  "grader_entrypoint": "grader/grade.py",
+  "visible_checks": ["python3 visible_check.py"],
+  "expected_artifacts": ["shortest_path.py"],
+  "fairness_notes": [
+    "The function must use only the Python standard library.",
+    "All edge weights are non-negative."
+  ],
+  "anti_cheat_notes": [
+    "Hidden tests include weighted graphs where BFS-like logic is wrong.",
+    "Ties must resolve to the lexicographically smallest path."
+  ],
+  "tags": ["python", "graphs", "dijkstra"]
+}

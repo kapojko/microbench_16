@@ -1,0 +1,24 @@
+{
+  "id": "py_rate_limiter_sliding_window",
+  "title": "Sliding Window Rate Limiter",
+  "difficulty": "medium",
+  "family": "backend",
+  "task_type": "code_patch",
+  "response_type": "workspace_files",
+  "summary": "Repair a per-key sliding-window rate limiter with exact boundary semantics and independent per-user state.",
+  "required_tools": ["python3"],
+  "time_budget_sec": 1200,
+  "starter_subdir": "starter",
+  "grader_entrypoint": "grader/grade.py",
+  "visible_checks": ["python3 visible_check.py"],
+  "expected_artifacts": ["rate_limiter.py"],
+  "fairness_notes": [
+    "Use only the Python standard library.",
+    "Timestamps are monotonic floats supplied by the caller."
+  ],
+  "anti_cheat_notes": [
+    "Hidden tests exercise exact lower-bound expiry semantics.",
+    "Hidden tests verify multiple keys are isolated."
+  ],
+  "tags": ["python", "backend", "windowing"]
+}

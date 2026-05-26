@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "microbench12"
+version = "0.1.0"
+description = "MicroBench-12: a small, harness-aware benchmark for coding agents and local models."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [
+  {name = "Ilya"}
+]
+dependencies = []
+
+[project.scripts]
+mb12 = "microbench12.cli:main"
+
+[tool.setuptools]
+packages = ["microbench12"]

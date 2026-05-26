@@ -1,0 +1,23 @@
+{
+  "id": "rs_arena_graph_storage",
+  "title": "Arena Graph Storage",
+  "difficulty": "medium",
+  "family": "rust",
+  "task_type": "library_repair",
+  "response_type": "workspace_files",
+  "summary": "Repair a small arena-backed Rust graph library so parent/child wiring, root paths, and BFS traversal work correctly.",
+  "required_tools": ["cargo", "rustc"],
+  "time_budget_sec": 1500,
+  "starter_subdir": "starter",
+  "grader_entrypoint": "grader/grade.py",
+  "visible_checks": ["cargo test --test visible_smoke"],
+  "expected_artifacts": ["src/lib.rs"],
+  "fairness_notes": [
+    "No external crates are required.",
+    "The grader uses cargo integration tests only."
+  ],
+  "anti_cheat_notes": [
+    "Hidden tests check BFS ordering, invalid parent handling, and root-to-leaf path ordering."
+  ],
+  "tags": ["rust", "arena", "graph"]
+}

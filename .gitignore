@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+results/
+materialized/
+scratch/
+.venv/
+venv/
+.env
+*.log
+latest_container_run.log
+tmux_*.log
