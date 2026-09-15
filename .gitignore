@@ -11,3 +11,4 @@ venv/
 *.log
 latest_container_run.log
 tmux_*.log
+*.egg-info
